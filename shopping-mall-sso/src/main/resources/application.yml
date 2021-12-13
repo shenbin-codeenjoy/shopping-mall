@@ -1,0 +1,30 @@
+server:
+  port: 6060
+  max-http-header-size: 102400
+  servlet:
+    context-path: /mall_sso
+spring:
+  application:
+    name: shopping_mall_sso
+  mvc:
+    static-path-pattern: /static/**
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+  datasource:
+    url: jdbc:mysql://127.168.1.215:3306/shopping_mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: Java_test1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 6
+    host: 127.168.1.215
+    port: 6379
+    password: redistest
+    timeout: 10000ms
+    lettuce:
+      pool:
+        max-active: 600
+        max-idle: 300
+        min-idle: 1
+        max-wait: 5000ms
